@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "95351565887",
+    "firebase_url": "https://ordanburdan-b1f29.firebaseio.com",
+    "project_id": "ordanburdan-b1f29",
+    "storage_bucket": "ordanburdan-b1f29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95351565887:android:b1bbd6bdf71dc271e5128a",
+        "android_client_info": {
+          "package_name": "com.example.authexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95351565887-24gbh4nju9e511m2banld7gsunj0sosa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnBdN66uEoYpJcnTWoV0trHgMNGHWd1MI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95351565887-24gbh4nju9e511m2banld7gsunj0sosa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
