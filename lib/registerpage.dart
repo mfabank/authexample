@@ -1,19 +1,15 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'auth.dart';
 
-class SignIn extends StatefulWidget {
-
+class Register extends StatefulWidget {
   final Function toogleView;
-  SignIn({this.toogleView});
+  Register({this.toogleView});
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
-
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
@@ -27,7 +23,7 @@ class _SignInState extends State<SignIn> {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.deepOrangeAccent[100],
       appBar: AppBar(
-        title: Text("Sign In"),
+        title: Text("Register"),
         centerTitle: true,
         backgroundColor: Colors.deepOrangeAccent,
         actions: [
@@ -36,7 +32,7 @@ class _SignInState extends State<SignIn> {
                 widget.toogleView();
               },
               icon: Icon(Icons.person),
-              label: Text("Register"))
+              label: Text("SignIn"))
         ],
       ),
       body: Container(
@@ -95,10 +91,10 @@ class _SignInState extends State<SignIn> {
               ),
               RaisedButton(
                 color: Colors.red,
-                child: Text("Giriş"),
+                child: Text("Kayıt"),
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
-                    dynamic result = await _auth.signInWithEmainAndPassword(email, password);
+                    dynamic result = await _auth.registerWithEmainAndPassword(email, password);
                     if(result == null){
                       setState(() => error = "Mail formatı girin");
                     }
@@ -106,6 +102,8 @@ class _SignInState extends State<SignIn> {
                   }
                 },
               ),
+              SizedBox(height: 10,),
+              Text(error,style: TextStyle(color: Colors.red),),
             ],
           ),
         ),

@@ -1,4 +1,3 @@
-import 'package:authexample/RegisterPage.dart';
 import 'package:authexample/auth.dart';
 import 'package:authexample/user.dart';
 import 'package:authexample/wrapper.dart';
